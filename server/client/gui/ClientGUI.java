@@ -66,18 +66,26 @@ public class ClientGUI extends JFrame implements ClientView {
     }
 
     private Component createHeaderPanel() {
-        headerPanel = new JPanel(new GridLayout());
+        headerPanel = new JPanel(new GridLayout(2,4));
+        JLabel ipAddressLabel = new JLabel("IP Address:");
         tfIPAddress = new JTextField("127.0.0.1");
+        JLabel portLabel = new JLabel("Port:");
         tfPort = new JTextField("8189");
-        tfLogin = new JTextField("Ivan Ivanovich");
-        password = new JPasswordField("123456");
+        JLabel stub = new JLabel();
+        JLabel usernameLabel = new JLabel("Username:");
+        tfLogin = new JTextField();
+        JLabel passwordLabel = new JLabel("Password:");
+        password = new JPasswordField();
         btnLogin = new JButton("login");
         btnLogin.addActionListener(e -> login());
-
+        headerPanel.add(ipAddressLabel);
         headerPanel.add(tfIPAddress);
+        headerPanel.add(portLabel);
         headerPanel.add(tfPort);
-        headerPanel.add(new JPanel());
+        headerPanel.add(stub);
+        headerPanel.add(usernameLabel);
         headerPanel.add(tfLogin);
+        headerPanel.add(passwordLabel);
         headerPanel.add(password);
         headerPanel.add(btnLogin);
 
