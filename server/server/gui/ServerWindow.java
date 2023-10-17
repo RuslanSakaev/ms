@@ -5,8 +5,6 @@ import server.server.repo.FileStorage;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class ServerWindow extends JFrame implements server.server.gui.ServerView {
     public static final int WIDTH = 400;
@@ -48,19 +46,9 @@ public class ServerWindow extends JFrame implements server.server.gui.ServerView
         btnStart = new JButton("Start");
         btnStop = new JButton("Stop");
 
-        btnStart.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                server.start();
-            }
-        });
+        btnStart.addActionListener(e -> server.start());
 
-        btnStop.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                server.stop();
-            }
-        });
+        btnStop.addActionListener(e -> server.stop());
 
         panel.add(btnStart);
         panel.add(btnStop);

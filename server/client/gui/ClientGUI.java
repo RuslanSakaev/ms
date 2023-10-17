@@ -72,12 +72,7 @@ public class ClientGUI extends JFrame implements ClientView {
         tfLogin = new JTextField("Ivan Ivanovich");
         password = new JPasswordField("123456");
         btnLogin = new JButton("login");
-        btnLogin.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                login();
-            }
-        });
+        btnLogin.addActionListener(e -> login());
 
         headerPanel.add(tfIPAddress);
         headerPanel.add(tfPort);
@@ -107,12 +102,7 @@ public class ClientGUI extends JFrame implements ClientView {
             }
         });
         btnSend = new JButton("send");
-        btnSend.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                message();
-            }
-        });
+        btnSend.addActionListener(e -> message());
         panel.add(tfMessage);
         panel.add(btnSend, BorderLayout.EAST);
         return panel;

@@ -1,7 +1,6 @@
 package server;
 
 import server.client.gui.ClientGUI;
-import server.server.domain.Server;
 import server.server.gui.ServerWindow;
 
 public class Main {
